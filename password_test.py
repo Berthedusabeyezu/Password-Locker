@@ -14,7 +14,7 @@ class TestUser(unittest.TestCase):
         Set up method to run before each test cases.
         '''
         self.new_user = User("Bona","Kiki","bonkiki","bonki2") # create user object
-
+   
 
     def test_init(self):
         '''
@@ -23,7 +23,7 @@ class TestUser(unittest.TestCase):
 
         self.assertEqual(self.new_user.first_name,"Bona")
         self.assertEqual(self.new_user.last_name,"Kiki")
-        self.assertEqual(self.new_user.username,"bonki")
+        self.assertEqual(self.new_user.username,"bonkiki")
         self.assertEqual(self.new_user.password,"bonki2")
 
 

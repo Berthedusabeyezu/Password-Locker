@@ -14,13 +14,13 @@ def save_credentials(credential):
     '''
     credential.save_credential()
 
-def del_credential(credential):
+def del_credentials(credential):
     '''
     Function to delete a credential
     '''
     credential.delete_credential() 
 
-def find_credential(credential):
+def find_credentials(credential):
     '''
     Function that finds a credential by username and returns the credential
     '''
@@ -48,7 +48,7 @@ def main():
 
     while True:
 
-        print("Use these short codes : cc - create a new credential, dc - display credentials, fc -find a credential,dec-delete credential, ex -exit the credential list ")
+        print("Use these short codes : cc - create a new credential, dc - display credentials, fc -find a credential,dl-delete credential, ex -exit the credential list ")
 
         short_code = input().lower()
 
@@ -99,20 +99,23 @@ def main():
                 else:
                         print("That credential does not exist")
 
-        elif short_code == 'dec':
+        elif short_code == 'dl':
 
-                    if delete_credentials():
-                            print("Delete credential created")
-                            print('\n')
+                print("Enter the account_type you want to delete ")
 
-                            for credential in delete_credentials():
-                                print(f"{credential.account_type} {credential.username} .....{credential.password}")
 
-                            print('\n')
-                    else:
-                            print('\n')
-                            print("You dont seem to have any credentials saved yet")
-                            print('\n')
+                search_account_type = input()
+
+                if check_existing_credentials(search_account_type):
+                        search_credential = find_account_type(search_account_type)
+                        
+                        del_credentials(search_account_type) 
+                        print("Credetial Delete")
+
+                else:
+                    print("Credential doesn't exist")
+
+
         elif short_code == "ex":
             print("Bye .......")
             break

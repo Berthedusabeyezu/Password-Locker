@@ -51,7 +51,7 @@ class TestCredential(unittest.TestCase):
         test_credential.save_credential()
         self.assertEqual(len(Credential.credential_list),2)
 
-    def test_delete_credential(self):
+    def test_delete_credentials(self):
         '''
         test_delete_credential to test if we can remove a credential from our credential list
         '''

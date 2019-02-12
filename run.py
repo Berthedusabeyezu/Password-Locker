@@ -8,7 +8,7 @@ from credential import Credential
         new_credential = Credential(account_email,username,password)
         return new_credential
     
-    def save_credentials(credential):
+    def save_credentials(credential): 
         '''
         Function to save credential
         '''

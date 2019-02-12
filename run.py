@@ -18,7 +18,7 @@ from credential import Credential
         '''
         Function to delete a credential
         '''
-        credential.delete_credential()
+        credential.delete_credential() 
 
     def find_credential(credential):
         '''

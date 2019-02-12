@@ -30,4 +30,4 @@ from credential import Credential
         '''
         Function that check if a ccredential exists with that username and return a Boolean
         '''
-        return Credential.credential_exist(username)    
+        return Credential.credential_exist(username)     

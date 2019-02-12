@@ -9,7 +9,7 @@ from credential import Credential
         return new_credential
     
     def save_credentials(credential): 
-        '''
+        ''' 
         Function to save credential
         '''
         credential.save_credential()

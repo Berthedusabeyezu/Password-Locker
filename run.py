@@ -64,11 +64,11 @@ def main():
 
                 print("password ...")
                 password= input()
+                print(f"The Password length {len(password)} to the password")
                 save_credentials(create_credential(account_type,username,password)) # create and save new credential.
                 print ('\n')
                 print(f"New Credential {account_type,username,password}  created")
                 print ('\n')
-
         elif short_code == 'dc':
 
             if display_credentials():
@@ -96,6 +96,7 @@ def main():
 
                         print(f"Password.......{search_credential.password}")
                         print(f"Account_email.......{search_credential.account_email}")
+                       
                 else:
                         print("That credential does not exist")
 
